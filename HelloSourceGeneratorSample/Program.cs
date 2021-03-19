@@ -3,41 +3,43 @@
 using System;
 using AutoNotify;
 
-class Program
+namespace HelloSourceGeneratorSample
 {
-    static void Main(string[] args)
+    class Program
     {
-        var id = Sample.Id;
-        Console.WriteLine(id);
+        static void Main(string[] args)
+        {
+            var id = Sample.Id;
+            Console.WriteLine(id);
 
-        PartialClass partialClass = new();
-        partialClass.ShowMessage();
+            PartialClass partialClass = new();
+            partialClass.ShowMessage();
 
-        SourceTreeGenerated.SourceTree.Show();
+            SourceTreeGenerated.SourceTree.Show();
 
-        AutoNotifySample.Point point = new();
+            Point point = new();
 
-        point.PropertyChanged += (point, _) => {
-            var p = point as AutoNotifySample.Point;
-            Console.WriteLine($"The point has changed: {p?.X}");
-        };
-        point.X = 100;
-        point.X = 200;
-        point.X = 300;
+            point.PropertyChanged += (point, _) =>
+            {
+                var p = point as Point;
+                Console.WriteLine($"The point has changed: {p?.X}");
+            };
+            point.X = 100;
+            point.X = 200;
+            point.X = 300;
+        }
     }
-}
 
-partial class PartialClass
-{
-    private partial string GetMessage();
-
-    public void ShowMessage()
+    partial class PartialClass
     {
-        Console.WriteLine(GetMessage());
-    }
-}
+        private partial string GetMessage();
 
-namespace AutoNotifySample {
+        public void ShowMessage()
+        {
+            Console.WriteLine(GetMessage());
+        }
+    }
+
     partial class Point
     {
         [AutoNotify]

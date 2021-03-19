@@ -12,19 +12,22 @@ namespace HelloSourceGenerator
         public void Execute(GeneratorExecutionContext context)
         {
             context.AddSource("generated.cs", SourceText.From(text: @"
-public class Sample
+namespace HelloSourceGeneratorSample
 {
-    public const int Id = 1;
-}
+    public class Sample
+    {
+        public const int Id = 1;
+    }
 
-partial class PartialClass
-{
-    private partial string GetMessage() => ""Hello source generator!!"";
+    partial class PartialClass
+    {
+        private partial string GetMessage() => ""Hello source generator!!"";
+    }
 }
 ", encoding: Encoding.UTF8));
         }
 
         public void Initialize(GeneratorInitializationContext context)
-        {}
+        { }
     }
 }
