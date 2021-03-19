@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// [C#9] パーシャル メソッドの改良
+
+using System;
 
 namespace CSharp9Sample
 {
