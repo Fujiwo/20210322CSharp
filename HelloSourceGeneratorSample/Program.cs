@@ -9,7 +9,7 @@ namespace HelloSourceGeneratorSample
     {
         static void Main(string[] args)
         {
-            var id = Sample.Id;
+            var id = Sample.Id; // not implemented here.
             Console.WriteLine(id);
 
             PartialClass partialClass = new();
@@ -32,12 +32,9 @@ namespace HelloSourceGeneratorSample
 
     partial class PartialClass
     {
-        private partial string GetMessage();
+        private partial string GetMessage(); // not implemented here.
 
-        public void ShowMessage()
-        {
-            Console.WriteLine(GetMessage());
-        }
+        public void ShowMessage() => Console.WriteLine(GetMessage());
     }
 
     partial class Point

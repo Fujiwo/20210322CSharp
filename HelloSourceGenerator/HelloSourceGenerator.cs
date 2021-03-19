@@ -21,7 +21,7 @@ namespace HelloSourceGeneratorSample
 
     partial class PartialClass
     {
-        private partial string GetMessage() => ""Hello source generator!!"";
+        private partial string GetMessage() => ""Hello source generator!"";
     }
 }
 ", encoding: Encoding.UTF8));
