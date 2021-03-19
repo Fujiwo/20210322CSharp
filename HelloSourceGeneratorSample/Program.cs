@@ -19,14 +19,12 @@ namespace HelloSourceGeneratorSample
 
             Point point = new();
 
-            point.PropertyChanged += (point, _) =>
-            {
+            point.PropertyChanged += (point, _) => {
                 var p = point as Point;
                 Console.WriteLine($"The point has changed: {p?.X}");
             };
             point.X = 100;
             point.X = 200;
-            point.X = 300;
         }
     }
 

@@ -12,6 +12,7 @@
             new式で型を省略サンプル.Test();
             共変の戻り値の型サンプル.Test();
             拡張メソッドGetEnumeratorサンプル.Test();
+            Partialメソッドサンプル.Test();
         }
     }
 }
