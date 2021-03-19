@@ -12,6 +12,9 @@ namespace CSharp9Sample
         {
             Console.WriteLine($"\n******** {nameof(ネイティブサイズ整数サンプル)} ********");
 
+            nint  n1 = -1;
+            nuint n2 = 1U;
+
             Console.WriteLine($"int  : {typeof(int  ).FullName, -14}, MinValue = {int  .MinValue, 20}, MaxValue = {int  .MaxValue, 20}");
             Console.WriteLine($"nint : {typeof(nint ).FullName, -14}, MinValue = {nint .MinValue, 20}, MaxValue = {nint .MaxValue, 20}");
             Console.WriteLine($"long : {typeof(long ).FullName, -14}, MinValue = {long .MinValue, 20}, MaxValue = {long .MaxValue, 20}");
